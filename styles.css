@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #474747;
+    color: white;
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header {
+    display: block;
+    text-align: center;
+    align-content: center;
+    background: linear-gradient(to right, rgb(76, 76, 228), rgb(46, 46, 180));
+    width: 100%;
+    padding: 0.5%;
+}
+
+#goal {
+    text-transform: uppercase;
+    display: block;
+    font-size: 3rem;
+    line-height: normal;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white;
+    color: rgb(76, 76, 228);
+    width: 100%; /* Instead of 100vw */
+    max-width: 100%;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Ensures no extra space */
+}
+
+#score {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white; /* Text color */
+    background: linear-gradient(90deg, #FF5733, #FFC300);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: rgb(76, 76, 228);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+button:hover {
+    background-color: rgb(50, 50, 200);
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    padding-right: 40px;
+}
+
+#easy {
+    background-color: lightblue;
+    color: black;
+    border: none;
+    border-radius: 5%;
+}
+
+#hard {
+    background-color: lightcoral;
+    color: black;
+    border: none;
+    border-radius: 5%;
+}
+
+.color-display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-self: center;
+    gap: 10px;
+    width: 500px;
+    height: 300px;
+    padding-top: 20px;
+}
+
+.color-box {
+    border-radius: 10%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover Effect (Only if the game is not won) */
+.color-box:not(.disabled):hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Disabled Effect After Winning */
+.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.one {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: red;
+    border-radius: 5%;
+}
+
+.two {
+    grid-area: 2 / 2 / -3 / -2;
+    background-color: blueviolet;
+    border-radius: 5%;
+}
+
+.three {
+    grid-area: -3 / 4 / -2 / 3;
+    background-color: blue;
+    border-radius: 5%;
+}
+
+.four {
+    grid-area: 2 / -4 / 3 / -3;
+    background-color: orange;
+    border-radius: 5%;
+}
+
+.five {
+    grid-area: 2 / -2 / 3 / -3;
+    background-color: brown;
+    border-radius: 5%;
+}
+
+.six {
+    grid-area: 2 / -2 / 3 / -1;
+    background-color: seagreen;
+    border-radius: 5%;
+} 
