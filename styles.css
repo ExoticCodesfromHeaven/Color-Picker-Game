@@ -28,7 +28,7 @@ body {
     text-align: center;
     align-content: center;
     background: linear-gradient(to right, rgb(76, 76, 228), rgb(46, 46, 180));
-    width: 100%;
+    /* width: 100%; */
     padding: 0.5%;
 }
 
@@ -47,8 +47,8 @@ nav {
     padding: 15px 20px;
     background-color: white;
     color: rgb(76, 76, 228);
-    width: 100%; /* Instead of 100vw */
-    max-width: 100%;
+    /* width: 100%; /* Instead of 100vw */
+    /* max-width: 100%; */
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
     overflow: hidden; /* Ensures no extra space */
 }
@@ -85,7 +85,6 @@ button:hover {
 .button-group {
     display: flex;
     gap: 10px;
-    padding-right: 40px;
 }
 
 #easy {
@@ -166,3 +165,18 @@ button:hover {
     background-color: seagreen;
     border-radius: 5%;
 } 
+
+@media screen and (max-width: 768px) {
+    #score {
+        font-size: medium;
+    }
+    .color-display {
+        width: 80vw;
+        height: 25vh;
+        align-content: center;
+    }
+    .button {
+        padding: 2px 5px;
+        font-size: 0.5rem;
+    }
+}

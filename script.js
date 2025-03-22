@@ -20,6 +20,8 @@ function newColors() {
     });
 
     score.textContent = 'PICK A COLOR';
+    refresh.textContent = 'New Colors';
+    goalHeader.style.color = 'white'
 
     easy.disabled = false;
     hard.disabled = false;
@@ -45,10 +47,18 @@ square.forEach(function(box) {
 
         if (clicked === goal) {
             score.textContent = 'YAY! YOU DID IT';
+            refresh.textContent = 'Play Again?';
             gameOver = true; // Set game over
 
-            // Disable all color boxes
-            square.forEach(box => box.classList.add("disabled"));
+            // change all colors to the correct color
+            square.forEach((box) => {
+                box.style.backgroundColor = clicked;
+                box.style.visibility = 'visible';
+                box.classList.add("disabled");
+
+            });
+
+            goalHeader.style.color = clicked;
 
             // Disable difficulty buttons
             easy.disabled = true;
